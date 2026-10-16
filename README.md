@@ -1,8 +1,9 @@
 # Pães Máximo
 
-Landing page responsiva para a padaria em Ji-Paraná-RO, com apresentação do
-pão integral doce, do pão integral de sal e do challah — pão doce trançado com
-ovos e erva-doce —, além de encomendas pelo WhatsApp.
+Landing page responsiva para a padaria em Ji-Paraná-RO, com apresentação dos
+pães integrais, do challah — pão doce trançado com ovos e erva-doce —, da
+Trança Dourada de Frango e do Trançado de palmito, além de encomendas pelo
+WhatsApp.
 
 ## Stack
 

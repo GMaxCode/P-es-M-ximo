@@ -16,8 +16,8 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(site.siteUrl),
   title: `${site.clientName} — Qualidade que você merece! | ${site.city}`,
-  description: `Pães fofos, saborosos e de qualidade. ${site.clientName} em ${site.city}: pão integral doce, pão integral de sal e challah.`,
-  keywords: ["padaria", site.city, site.clientName, "pão integral doce", "pão integral de sal", "challah"],
+  description: `Pães fofos, saborosos e de qualidade. ${site.clientName} em ${site.city}: pães integrais, challah e pães trançados recheados.`,
+  keywords: ["padaria", site.city, site.clientName, "pão integral doce", "pão integral de sal", "challah", "trança dourada de frango", "trançado de palmito"],
   alternates: { canonical: "/" },
   openGraph: {
     title: `${site.clientName} — Qualidade que você merece!`,

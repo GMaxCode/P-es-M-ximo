@@ -18,7 +18,7 @@ const products = [
     title: "Pão integral doce",
     description:
       "A versão doce do pão integral da casa, feita com farinha integral como ingrediente principal.",
-    image: "/images/4.jpg",
+    image: "/images/pao-integral-doce.jpg",
     alt: "Pão integral doce da Pães Máximo",
     tag: "Integral & doce",
     message:
@@ -29,7 +29,7 @@ const products = [
     title: "Pão integral de sal",
     description:
       "A opção de sal da casa também é integral, com farinha integral como ingrediente principal.",
-    image: "/images/1.jpg",
+    image: "/images/pao-integral-sal.jpg",
     alt: "Pão integral de sal da Pães Máximo",
     tag: "Integral & de sal",
     message:
@@ -40,11 +40,33 @@ const products = [
     title: "Pão trançado Challah",
     description:
       "Challah trançado, tradicional, doce, rico em ovos e com erva-doce. Um destaque da nossa padaria.",
-    image: "/images/challah2.jpg",
+    image: "/images/challah4.jpg",
     alt: "Pão trançado Challah da Pães Máximo",
     tag: "Especialidade",
     message:
       "Olá, tudo bem? Vim do site Pães Máximos, eu gostaria de fazer uma encomenda de um Pão trançado Challah.",
+  },
+  {
+    number: "04",
+    title: "Trança Dourada de Frango",
+    description:
+      "Pão trançado e recheado com frango, dourado por fora e saboroso para compartilhar.",
+    image: "/images/tranca-dourada-frango.jpg",
+    alt: "Trança Dourada de Frango da Pães Máximo",
+    tag: "Recheado",
+    message:
+      "Olá, tudo bem? Vim do site Pães Máximos, eu gostaria de fazer uma encomenda de uma Trança Dourada de Frango.",
+  },
+  {
+    number: "05",
+    title: "Trançado de palmito",
+    description:
+      "Pão trançado e recheado com palmito, uma opção especial para qualquer ocasião.",
+    image: "/images/trancado-palmito.jpg",
+    alt: "Pão trançado recheado com palmito da Pães Máximo",
+    tag: "Recheado",
+    message:
+      "Olá, tudo bem? Vim do site Pães Máximos, eu gostaria de fazer uma encomenda de um Trançado de palmito.",
   },
 ];
 
@@ -79,7 +101,7 @@ export default function Home() {
         <section className="hero" id="inicio">
           <div className="hero-image" aria-hidden="true">
             <Image
-              src="/images/pao-doce.jpg"
+              src="/images/hero.jpg"
               alt=""
               fill
               priority
@@ -100,8 +122,8 @@ export default function Home() {
                 você <em>merece.</em>
               </h1>
               <p className="hero-copy">
-                Pães fofos, saborosos e de qualidade: pão integral doce, pão
-                integral de sal e o challah especial da casa.
+                Pães fofos e saborosos para todos os momentos: opções
+                integrais, challah e pães trançados recheados.
               </p>
               <div className="hero-actions">
                 <a className="button button-light" href={whatsappUrl} target="_blank" rel="noreferrer">
@@ -139,8 +161,8 @@ export default function Home() {
               <p>
                 Na {site.clientName}, cada fornada nasce do cuidado com os
                 ingredientes e do prazer de fazer pão. Aqui você encontra pão
-                integral doce, pão integral de sal e também o challah, uma
-                receita trançada especial que é a cara da nossa padaria.
+                integral doce, pão integral de sal, o challah e opções
+                trançadas recheadas de frango e palmito.
               </p>
               <p>
                 Para o café da manhã em família, o lanche das crianças ou para
@@ -211,7 +233,7 @@ export default function Home() {
             <MotionIn className="challah-feature">
               <div className="challah-photo">
                 <Image
-                  src="/images/challah2.jpg"
+                  src="/images/challah4.jpg"
                   alt="Challah trançado, pão especial da padaria"
                   fill
                   sizes="(max-width: 700px) 90vw, 40vw"
