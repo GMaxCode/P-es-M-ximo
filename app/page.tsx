@@ -15,7 +15,7 @@ import { buildWhatsAppUrl, mapUrl, site, whatsappUrl } from "@/lib/site";
 const products = [
   {
     number: "01",
-    title: "Pão integral doce",
+    title: "Pão de Fibra integral doce",
     description:
       "A versão doce do pão integral da casa, feita com farinha integral como ingrediente principal.",
     image: "/images/pao-integral-doce.jpg",
@@ -26,7 +26,7 @@ const products = [
   },
   {
     number: "02",
-    title: "Pão integral de sal",
+    title: "Pão de Fibra integral de sal",
     description:
       "A opção de sal da casa também é integral, com farinha integral como ingrediente principal.",
     image: "/images/pao-integral-sal.jpg",
@@ -40,7 +40,7 @@ const products = [
     title: "Pão trançado Challah",
     description:
       "Challah trançado, tradicional, doce, rico em ovos e com erva-doce. Um destaque da nossa padaria.",
-    image: "/images/challah4.jpg",
+    image: "/images/challah1.jpg",
     alt: "Pão trançado Challah da Pães Máximo",
     tag: "Especialidade",
     message:
