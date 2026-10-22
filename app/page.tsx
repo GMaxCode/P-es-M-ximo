@@ -37,7 +37,7 @@ const products = [
   },
   {
     number: "03",
-    title: "Pão trançado Challah",
+    title: "Pão trançado Challah(Ralá)",
     description:
       "Challah trançado, tradicional, doce, rico em ovos e com erva-doce. Um destaque da nossa padaria.",
     image: "/images/challah2.jpg",
@@ -237,9 +237,9 @@ export default function Home() {
               </div>
               <div className="challah-copy">
                 <p className="eyebrow">Nosso pão especial</p>
-                <h3>Conheça o <em>challah.</em></h3>
+                <h3>Conheça o <em>challah(Ralá).</em></h3>
                 <p>
-                  O challah é um pão trançado tradicional da culinária judaica,
+                  O challah(Ralá) é um pão trançado tradicional da culinária judaica,
                   rico em ovos e com raízes bíblicas e europeias medievais. Na
                   nossa padaria, ele é doce — e leva erva-doce.
                 </p>
