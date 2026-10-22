@@ -40,7 +40,7 @@ const products = [
     title: "Pão trançado Challah",
     description:
       "Challah trançado, tradicional, doce, rico em ovos e com erva-doce. Um destaque da nossa padaria.",
-    image: "/images/challah1.jpg",
+    image: "/images/challah2.jpg",
     alt: "Pão trançado Challah da Pães Máximo",
     tag: "Especialidade",
     message:
@@ -91,7 +91,20 @@ const differences = [
   },
 ];
 
-const testimonials = ["Adicione aqui o depoimento de um cliente.", "Adicione aqui o depoimento de um cliente.", "Adicione aqui o depoimento de um cliente."];
+const testimonials = [
+  {
+    name: "Vasty Gomes",
+    text: "Já provei do Challah e é muito bom! super recomendo.",
+  },
+  {
+    name: "Ellen Gomes",
+    text: "O pão integral de sal é com certeza o melhor da cidade!",
+  },
+  {
+    name: "Guilherme Máximo",
+    text: "Já provei de todos, e são todos gostos, meu favorito é o pão integral de doce, não tem erro!",
+  },
+];
 
 export default function Home() {
   return (
@@ -101,7 +114,7 @@ export default function Home() {
         <section className="hero" id="inicio">
           <div className="hero-image" aria-hidden="true">
             <Image
-              src="/images/hero.jpg"
+              src="/images/5.jpg"
               alt=""
               fill
               priority
@@ -110,12 +123,8 @@ export default function Home() {
             />
           </div>
           <div className="hero-shade" />
-          <div className="hero-content page-width">
+          <div className="hero-content">
             <MotionIn>
-              <p className="eyebrow eyebrow-light">
-                <span className="eyebrow-dot" /> Feito com carinho em{" "}
-                {site.city}
-              </p>
               <h1>
                 Qualidade que
                 <br />
@@ -136,10 +145,6 @@ export default function Home() {
                 </a>
               </div>
             </MotionIn>
-            <div className="hero-note">
-              <span className="hero-note-line" />
-              <span>Pequenas fornadas, grandes momentos</span>
-            </div>
           </div>
           <a className="hero-scroll" href="#sobre" aria-label="Role para conhecer a padaria">
             <ArrowDown size={17} aria-hidden="true" />
@@ -149,7 +154,6 @@ export default function Home() {
         <section className="intro-section section-pad" id="sobre">
           <div className="page-width intro-grid">
             <MotionIn className="intro-heading">
-              <p className="eyebrow">Um pão muda o dia</p>
               <h2>
                 Simples assim:
                 <br />
@@ -184,23 +188,14 @@ export default function Home() {
               </MotionIn>
             ))}
           </div>
-          <p className="page-width audience">
-            <span>Feito para compartilhar</span>
-            Famílias, padarias, mercados, mercearias e escolas.
-          </p>
         </section>
 
         <section className="products-section section-pad" id="servicos">
           <div className="page-width">
             <MotionIn className="section-heading">
               <div>
-                <p className="eyebrow">Da nossa fornada para sua mesa</p>
                 <h2>Tem pão para<br /><em>todo gosto.</em></h2>
               </div>
-              <p className="section-aside">
-                Escolha o seu favorito e fale com a gente para consultar
-                disponibilidade e encomendar.
-              </p>
             </MotionIn>
             <div className="product-grid">
               {products.map((product, index) => (
@@ -215,13 +210,13 @@ export default function Home() {
                     <Image
                       src={product.image}
                       alt={product.alt}
-                      fill
-                      sizes="(max-width: 700px) 90vw, (max-width: 1050px) 45vw, 30vw"
-                      className="cover-image product-image"
+                      width={600}
+                      height={600}
+                      sizes="(max-width: 700px) 70vw, 240px"
+                      className="product-image"
                     />
                     <span className="product-number">{product.number}</span>
                     <span className="product-tag">{product.tag}</span>
-                    <span className="product-arrow"><ArrowUpRight size={18} aria-hidden="true" /></span>
                   </a>
                   <div className="product-info">
                     <h3>{product.title}</h3>
@@ -264,19 +259,15 @@ export default function Home() {
         <section className="testimonials-section section-pad">
           <div className="page-width">
             <MotionIn className="section-heading testimonial-heading">
-              <div>
-                <p className="eyebrow">Palavra de quem prova</p>
-                <h2>Histórias que saem <em>do forno.</em></h2>
-              </div>
-              <span className="coming-soon-label">Depoimentos em breve</span>
+              <h2>Histórias que saem <em>do forno.</em></h2>
             </MotionIn>
             <div className="testimonial-grid">
               {testimonials.map((testimonial, index) => (
-                <article className="testimonial-card" key={index}>
+                <MotionIn className="testimonial-card" delay={index * 0.08} key={testimonial.name}>
                   <span className="quote-mark" aria-hidden="true">“</span>
-                  <p>{testimonial}</p>
-                  <span className="coming-soon">Em breve</span>
-                </article>
+                  <p>{testimonial.text}</p>
+                  <span className="testimonial-name">{testimonial.name}</span>
+                </MotionIn>
               ))}
             </div>
           </div>
@@ -324,14 +315,12 @@ export default function Home() {
           <MotionIn className="page-width contact-inner">
             <p className="eyebrow eyebrow-light">A próxima fornada pode ser sua</p>
             <h2>Vamos escolher<br />seu próximo <em>pão favorito?</em></h2>
-            <p>Faça sua encomenda ou pergunte o que acabou de sair do forno.</p>
             <a className="button button-light contact-button" href={whatsappUrl} target="_blank" rel="noreferrer">
               <Croissant size={19} aria-hidden="true" />
               Chamar no WhatsApp
               <ArrowUpRight size={18} aria-hidden="true" />
             </a>
             <div className="contact-social">
-              <span>Fale com a gente</span>
               {site.email && (
                 <a href={`mailto:${site.email}`}>
                   {site.email} <ArrowUpRight size={14} aria-hidden="true" />
@@ -348,7 +337,7 @@ export default function Home() {
         <div className="page-width footer-main">
           <a className="brand footer-brand" href="#inicio" aria-label={`${site.clientName}, início`}>
             <span className="brand-mark"><Croissant size={21} strokeWidth={1.7} aria-hidden="true" /></span>
-            <span className="brand-text">{site.clientName}<small>PADARIA ARTESANAL</small></span>
+            <span className="brand-text">{site.clientName}</span>
           </a>
           <p className="footer-slogan">Qualidade que você merece!</p>
           <div className="footer-links">

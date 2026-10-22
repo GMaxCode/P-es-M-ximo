@@ -58,7 +58,7 @@ export function SiteHeader() {
       <div className="page-width header-inner">
         <a className="brand" href="#inicio" onClick={closeMenu}>
           <span className="brand-mark"><Croissant size={21} strokeWidth={1.7} aria-hidden="true" /></span>
-          <span className="brand-text">{site.clientName}<small>PADARIA ARTESANAL</small></span>
+          <span className="brand-text">{site.clientName}</span>
         </a>
         <nav className="desktop-nav" aria-label="Navegação principal">
           {links.map((link) => <a key={link.href} href={link.href}>{link.label}</a>)}
